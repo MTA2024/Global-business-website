@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK Global Business</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+        // Smooth Scroll for Navbar Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Hover Effect on Plans
+        const plans = document.querySelectorAll('.plan');
+        plans.forEach(plan => {
+            plan.addEventListener('mouseenter', () => {
+                plan.style.transform = 'scale(1.05)';
+                plan.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+            });
+            plan.addEventListener('mouseleave', () => {
+                plan.style.transform = 'scale(1)';
+                plan.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+            });
+        });
+        
+        // Feedback Section Fade-in on Scroll
+        window.addEventListener('scroll', () => {
+            const feedbackSection = document.getElementById('feedback');
+            const feedbackPos = feedbackSection.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+        
+            if (feedbackPos < windowHeight - 100) {
+                feedbackSection.style.opacity = '1';
+                feedbackSection.style.transform = 'translateY(0)';
+            } else {
+                feedbackSection.style.opacity = '0';
+                feedbackSection.style.transform = 'translateY(50px)';
+            }
+        });
+        </script>
+        
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-content-left">
+                <ul class="navbar-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#plans">Plans</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-content-right">
+                <h1 id="ret">GK Global Business</h1> <!-- Small business name -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-content">
+             <div class="images"> <img src="https://i.postimg.cc/hjCb7LHJ/AI-Generated-Image-2024-09-16-464209941031201.jpg" alt="About Image"></div>
+            <h2>About Our Business</h2>
+            <p id="text">At GK Global Business, we specialize in innovative solutions <br>that drive success.Our dedicated team provides expert services tailored to meet your unique needs,<br> ensuring exceptional results and lasting impact.</p>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section id="plans">
+        <h2 id="our">Our Plans</h2>
+        <div class="plans-container">
+            <div class="plan">
+                <h3 id="ba">Basic Plan</h3>
+                <p id="go">Essential features for a startup or small business.</p>
+                <ul class="plan-features">
+                    <div class="adv">
+                    <li>-Professional Design</li>
+                    <li>-Up to 5 Pages (Home, About, Services, Contact, Blog)</li>
+                    <li>-Basic SEO</li>
+                    <li>-Responsive Design</li>
+                    <li>-Contact Form</li>
+                    <li>-Social Media Links</li></div>
+                </ul>
+                <p class="plan-details">Price: $50</p>
+            </div>
+            <div class="plan">
+                <h3 id="ba">Advanced Plan</h3>
+                <p id="go">Enhanced features for growing businesses.</p>
+                <ul class="plan-features">
+                    <div class="adv">
+                    <li>-Custom Design</li>
+                    <li>-Up to 10 Pages (includes FAQs, Testimonials, Portfolio, Team)</li>
+                    <li>-Advanced SEO</li>
+                    <li>-E-commerce Integration</li>
+                    <li>-CMS for Blog</li>
+                    <li>-Enhanced Analytics</li>
+                    <li>-Live Chat</li>
+                </div>
+                </ul>
+                <p class="plan-details">Price: $100</p>
+            </div>
+            
+            <div class="plan">
+                <h3 id="ba">Premium Plan</h3>
+                <p id="go">Comprehensive solution with premium features.</p>
+                <ul class="plan-features">
+                    <div class="adv">
+                    <li>-Bespoke Design</li>
+                    <li>-Unlimited Pages</li>
+                    <li>-Full SEO Strategy</li>
+                    <li>-Advanced E-commerce</li>
+                    <li>-CMS</li>
+                    <li>-Detailed Analytics</li>
+                    <li>-Membership Options</li>
+                    <li>-Ongoing Support</li>
+                </div>
+                </ul>
+            
+                <p class="plan-details">Price: $200</p>
+            </div>
+        </div>
+    </section>
+    <section id="why-choose-us" class="why-choose-us">
+        <div class="container">
+            
+            <h2>Why Choose Us?</h2>
+            <img src="https://i.postimg.cc/QNHzsm9K/Picsart-24-09-16-16-03-54-793.png" width="40px" height="60px">
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-star"></i>
+                    <h3>Expertise</h3>
+                    <p>Skilled professionals with industry know-how.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Customized Solutions</h3>
+                    <p>Tailored services for your unique needs.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Results-Driven</h3>
+                    <p>Focused on delivering measurable outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Feedback Section -->
+    <section id="feedback">
+        <h2>Customer Feedback</h2>
+        <div class="feedback-container">
+            <div class="feedback">
+                <img src="https://i.postimg.cc/NfxCkzZV/AI-Generated-Image-2024-09-16-464214123027201.jpg" alt="Customer 1">
+                <p> “GK Global Business delivered a sleek, user-friendly site. The Basic Plan was perfect for our needs. Highly recommended!”</p>
+                <p>- Sarah L</p>
+            </div>
+            <div class="feedback">
+                <img src="https://i.postimg.cc/qRSH05pQ/pexels-simon-robben-55958-614810.jpg" alt="Customer 2">
+                <p>“The Advanced Plan brought our e-commerce vision to life. Excellent design and integration. Worth every penny!”</p>
+                <p>- Jane Smith</p>
+            </div>
+            <div class="feedback">
+                <img src="https://i.postimg.cc/kXNvdRct/AI-Generated-Image-2024-09-16-464211568004201-1.jpg" alt="Customer 3">
+                <p>"Excellent service and attention to detail."</p>
+                <p>- Sam Johnson</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="change">
+        <h2><b>Contact Us</h2></b>
+        <p><b>Have questions or want to schedule a consultation? Get in touch with us!</p></b>
+        <p><b>Email: contact@gkglobalbusiness.com</p></b>
+        <p><b>Phone: +212 702963373</p></b>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 GK Global Business. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
